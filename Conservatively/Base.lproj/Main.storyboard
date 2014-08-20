@@ -1,25 +1,153 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6162" systemVersion="14A238h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="14A314h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6160"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Conservatively" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="cc_bg2" translatesAutoresizingMaskIntoConstraints="NO" id="uvW-h3-nOp">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mouth" translatesAutoresizingMaskIntoConstraints="NO" id="3Sh-Db-pBe">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lefteye" translatesAutoresizingMaskIntoConstraints="NO" id="lny-T9-6H6">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="righteye" translatesAutoresizingMaskIntoConstraints="NO" id="eTs-K7-OsH">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ErH-mS-uGd">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BdH-za-IoY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uvW-h3-nOp" firstAttribute="bottom" secondItem="ErH-mS-uGd" secondAttribute="bottom" constant="52" id="FRU-9l-p64">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="3Sh-Db-pBe" firstAttribute="centerX" secondItem="uvW-h3-nOp" secondAttribute="centerX" constant="-5.5" id="HBi-m0-5NT">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-6.5"/>
+                            </constraint>
+                            <constraint firstItem="uvW-h3-nOp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="JEh-2H-acR"/>
+                            <constraint firstItem="uvW-h3-nOp" firstAttribute="centerX" secondItem="eTs-K7-OsH" secondAttribute="centerX" constant="-56.5" id="JZG-0g-8ow">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-56.5"/>
+                            </constraint>
+                            <constraint firstItem="lny-T9-6H6" firstAttribute="centerY" secondItem="uvW-h3-nOp" secondAttribute="centerY" constant="-29" id="KZf-QK-tah">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-29"/>
+                            </constraint>
+                            <constraint firstItem="uvW-h3-nOp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Kt4-Hf-6LT">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
+                            </constraint>
+                            <constraint firstItem="uvW-h3-nOp" firstAttribute="leading" secondItem="ErH-mS-uGd" secondAttribute="leading" constant="-23" id="W3w-iH-UXr">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="uvW-h3-nOp" firstAttribute="top" secondItem="ErH-mS-uGd" secondAttribute="top" constant="-20" id="azR-7Y-P1N">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="uvW-h3-nOp" firstAttribute="centerY" secondItem="eTs-K7-OsH" secondAttribute="centerY" constant="26.5" id="hcd-ra-D2d">
+                                <variation key="heightClass=regular-widthClass=compact" constant="26.5"/>
+                            </constraint>
+                            <constraint firstItem="lny-T9-6H6" firstAttribute="centerX" secondItem="uvW-h3-nOp" secondAttribute="centerX" constant="-61" id="jm4-Gm-Q8t">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-61"/>
+                            </constraint>
+                            <constraint firstItem="uvW-h3-nOp" firstAttribute="trailing" secondItem="ErH-mS-uGd" secondAttribute="trailing" constant="11" id="kWx-Yt-6LP">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="3Sh-Db-pBe" firstAttribute="centerY" secondItem="uvW-h3-nOp" secondAttribute="centerY" constant="121.5" id="rZ6-8N-BTp">
+                                <variation key="heightClass=regular-widthClass=compact" constant="120.5"/>
+                            </constraint>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uvW-h3-nOp" secondAttribute="bottom" constant="180" id="xbt-bj-1Rp">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="uvW-h3-nOp" secondAttribute="trailing" constant="-216" id="xjb-1O-qql">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-16"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="3Sh-Db-pBe"/>
+                                <exclude reference="lny-T9-6H6"/>
+                                <exclude reference="eTs-K7-OsH"/>
+                                <exclude reference="ErH-mS-uGd"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="FRU-9l-p64"/>
+                                <exclude reference="JEh-2H-acR"/>
+                                <exclude reference="JZG-0g-8ow"/>
+                                <exclude reference="Kt4-Hf-6LT"/>
+                                <exclude reference="W3w-iH-UXr"/>
+                                <exclude reference="azR-7Y-P1N"/>
+                                <exclude reference="hcd-ra-D2d"/>
+                                <exclude reference="kWx-Yt-6LP"/>
+                                <exclude reference="xjb-1O-qql"/>
+                                <exclude reference="KZf-QK-tah"/>
+                                <exclude reference="jm4-Gm-Q8t"/>
+                                <exclude reference="HBi-m0-5NT"/>
+                                <exclude reference="rZ6-8N-BTp"/>
+                                <exclude reference="xbt-bj-1Rp"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="3Sh-Db-pBe"/>
+                                <include reference="lny-T9-6H6"/>
+                                <include reference="eTs-K7-OsH"/>
+                                <include reference="ErH-mS-uGd"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="FRU-9l-p64"/>
+                                <include reference="JEh-2H-acR"/>
+                                <include reference="JZG-0g-8ow"/>
+                                <include reference="Kt4-Hf-6LT"/>
+                                <include reference="W3w-iH-UXr"/>
+                                <include reference="azR-7Y-P1N"/>
+                                <include reference="hcd-ra-D2d"/>
+                                <include reference="kWx-Yt-6LP"/>
+                                <include reference="xjb-1O-qql"/>
+                                <include reference="KZf-QK-tah"/>
+                                <include reference="jm4-Gm-Q8t"/>
+                                <include reference="HBi-m0-5NT"/>
+                                <include reference="rZ6-8N-BTp"/>
+                                <include reference="xbt-bj-1Rp"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="leftEye" destination="lny-T9-6H6" id="nLa-Bf-BFK"/>
+                        <outlet property="mouth" destination="3Sh-Db-pBe" id="QZO-k9-ovB"/>
+                        <outlet property="mouthConstraint" destination="rZ6-8N-BTp" id="nXH-eg-cUg"/>
+                        <outlet property="rightEye" destination="eTs-K7-OsH" id="bZE-oU-pzS"/>
+                        <outlet property="tapButton" destination="ErH-mS-uGd" id="Q5Q-V3-BnQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="304.5" y="289.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cc_bg2" width="320" height="568"/>
+        <image name="lefteye" width="22" height="22"/>
+        <image name="mouth" width="121" height="107"/>
+        <image name="righteye" width="21" height="21"/>
+    </resources>
 </document>
